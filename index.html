@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>引导页面</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background: url('space_background.jpg') no-repeat center center fixed;
+      background-size: cover;
+    }
+
+    #container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    .button {
+      display: inline-block;
+      width: 160px; /* 调整按钮宽度 */
+      height: 80px; /* 调整按钮高度 */
+      background: #4a90e2;
+      color: #fff;
+      text-align: center;
+      line-height: 80px;
+      font-size: 16px; /* 调整按钮字体大小 */
+      border-radius: 40px; /* 调整按钮半径 */
+      margin: 0 10px;
+      text-decoration: none; /* 去除默认链接样式 */
+      perspective: 1000px; /* 添加3D效果 */
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .button:hover {
+      transform: rotateX(5deg) rotateY(5deg) scale(1.1); /* 添加鼠标悬停时的3D晃动效果和放大效果 */
+    }
+
+    footer {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      background: #000;
+      color: #fff;
+      text-align: center;
+      padding: 10px 0;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <div id="container">
+      <button class="button" onclick="copyToClipboard('#')">not found</button>
+    <!--button class="button" onclick="copyToClipboard('https://m.auok.run/tvbox/tvbox.json')">TvBox</button>
+    <button class="button" onclick="copyToClipboard('https://m.auok.run/tvbox/tvbox2.json')">TvBox2</button>
+    <button class="button" onclick="copyToClipboard('https://m.auok.run/tvbox/tvbox3.json')">TvBox3</button>
+    <button class="button" onclick="copyToClipboard('https://m.auok.run/tvbox/4k.json')">4K</button>
+    <button class="button" onclick="copyToClipboard('http://mtw.so/6vMWh2')">IPTVLive</button-->
+  </div>
+
+  <footer>
+       <p><a href="https://hits.sh/m.auok.run/tvbox/"><img alt="Hits" src="https://hits.sh/m.auok.run/tvbox.svg?style=plastic&label=HITS"/></a></p>
+    <p>版权所有 &copy; 2023</p>
+  </footer>
+
+  <script>
+    function copyToClipboard(text) {
+      const textarea = document.createElement('textarea');
+      textarea.value = text;
+      document.body.appendChild(textarea);
+      textarea.select();
+      document.execCommand('copy');
+      document.body.removeChild(textarea);
+      alert('链接已复制到剪贴板！');
+    }
+  </script>
+  
+</body>
+</html>
